@@ -29,7 +29,7 @@ export const courseData: {
   heading: string;
   imgSrc: string;
   name: string;
-  students: number;
+  dateStart: string;
   classes: number;
   price: number;
   rating: number;
@@ -38,7 +38,7 @@ export const courseData: {
     heading: "Inteligencia Artificial Aplicada a Ingeniería Electrónica",
     name: "Diplomado",
     imgSrc: "/images/courses/dip_ia.jpeg",
-    students: 150,
+    dateStart: "5 de abril del 2025",
     classes: 12,
     price: 20,
     rating: 4.4,
@@ -48,7 +48,7 @@ export const courseData: {
       "Protección de Sistemas eléctricos de Extra Alt, Alta, Media y Baja tensión",
     name: "Maestría",
     imgSrc: "/images/courses/ma_se.jpeg",
-    students: 130,
+    dateStart: "5 de abril del 2025",
     classes: 12,
     price: 20,
     rating: 4.5,
@@ -57,7 +57,7 @@ export const courseData: {
     heading: "Gestión de la Calidad ISO 9001",
     name: "Diplomado",
     imgSrc: "/images/courses/di_gc.jpeg",
-    students: 120,
+    dateStart: "5 de abril del 2025",
     classes: 12,
     price: 20,
     rating: 5,
@@ -67,7 +67,7 @@ export const courseData: {
       "Gestión de la Calidad del Aire y Control de la Contaminación Atmosférica",
     name: "Diplomado",
     imgSrc: "/images/courses/di_gca.jpeg",
-    students: 150,
+    dateStart: "5 de abril del 2025",
     classes: 12,
     price: 20,
     rating: 5,
@@ -76,7 +76,7 @@ export const courseData: {
     heading: "Gestión, Control y Evaluación de Impacto Ambiental",
     name: "Diplomado",
     imgSrc: "/images/courses/di_gce.jpeg",
-    students: 150,
+    dateStart: "5 de abril del 2025",
     classes: 12,
     price: 20,
     rating: 5,
@@ -85,7 +85,7 @@ export const courseData: {
     heading: "Autotronica Sistemas Electronicos Vehiculos de Gasolina",
     name: "Diplomado",
     imgSrc: "/images/courses/di_ss.jpeg",
-    students: 150,
+    dateStart: "5 de abril del 2025",
     classes: 12,
     price: 20,
     rating: 4.2,

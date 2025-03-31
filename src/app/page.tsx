@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "@/components/Home/Hero";
-import Companies from "@/components/Home/Companies";
+// import Companies from "@/components/Home/Companies";
 import Courses from "@/components/Home/Courses";
 import Mentor from "@/components/Home/Mentor";
 import Testimonial from "@/components/Home/Testimonials";
@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Companies />
+      {/* <Companies /> */}
       <Courses />
-      <Mentor />
-      <Testimonial />
-      <Newsletter />
+      {/* <Mentor />
+      <Testimonial /> */}
+      {/* <Newsletter /> */}
     </main>
   );
 }
