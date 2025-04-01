@@ -32,7 +32,7 @@ const footer = () => {
             </div>
           </div>
           <div className="col-span-2">
-            <h3 className="mb-4 text-2xl font-medium">Links</h3>
+            <h3 className="mb-4 text-2xl font-medium">Enlaces</h3>
             <ul>
               {headerData.map((item, index) => (
                 <li

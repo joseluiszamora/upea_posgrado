@@ -3,13 +3,13 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 import toast from "react-hot-toast";
 import { validateEmail } from "../../../utils/validateEmail";
-import Loader from "@/components/Common/Loader";
+// import Loader from "@/components/Common/Loader";
 
 const MagicLink = () => {
   const [email, setEmail] = useState("");
   const [loader, setLoader] = useState(false);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!email) {
@@ -53,6 +53,7 @@ const MagicLink = () => {
           className="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-dark-6 focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:text-white dark:focus:border-primary"
         />
       </div>
+      {loader && <div>Cargando</div>}
       <div className="mb-9">
         <button
           type="submit"

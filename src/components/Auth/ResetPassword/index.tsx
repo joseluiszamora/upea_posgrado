@@ -32,8 +32,8 @@ const ResetPassword = ({ token }: { token: string }) => {
             email: res.data.email,
           });
         }
-      } catch (error: any) {
-        toast.error(error?.response?.data);
+      } catch {
+        // toast.error(error?.response?.data);
         router.push("/forgot-password");
       }
     };
@@ -71,8 +71,7 @@ const ResetPassword = ({ token }: { token: string }) => {
       }
 
       setLoader(false);
-    } catch (error: any) {
-      toast.error(error.response.data);
+    } catch {
       setLoader(false);
     }
   };

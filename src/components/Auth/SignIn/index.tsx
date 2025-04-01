@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import SocialSignIn from "../SocialSignIn";
-import Logo from "@/components/Layout/Header/Logo"
+import Logo from "@/components/Layout/Header/Logo";
 import Loader from "@/components/Common/Loader";
 
 const Signin = () => {
@@ -18,9 +18,7 @@ const Signin = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const loginUser = (e: any) => {
-    e.preventDefault();
-
+  const loginUser = () => {
     setLoading(true);
     signIn("credentials", { ...loginData, redirect: false })
       .then((callback) => {

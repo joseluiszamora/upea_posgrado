@@ -1,45 +1,7 @@
-// export default function Cursos() {
-//   return (
-//     <main>
-//       <section>
-//         <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
-//           <div className="sm:flex justify-between items-center mb-20">
-//             <h2 className="text-midnight_text text-4xl lg:text-5xl font-semibold mb-5 sm:mb-0">
-//               Nuestros Cursos.
-//             </h2>
-//           </div>
-//         </div>
-//       </section>
-//     </main>
-//   );
-// }
-
 import Link from "next/link";
 import { courseData } from "@/app/api/data";
 import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
-
-// Simulación de datos de cursos
-const cursos = [
-  {
-    id: 1,
-    slug: "curso-de-administracion",
-    titulo: "Curso de Administración",
-    descripcionCorta: "Aprende los fundamentos de la administración moderna",
-  },
-  {
-    id: 2,
-    slug: "curso-de-marketing",
-    titulo: "Curso de Marketing Digital",
-    descripcionCorta: "Estrategias efectivas para marketing en línea",
-  },
-  {
-    id: 3,
-    slug: "curso-de-finanzas",
-    titulo: "Curso de Finanzas",
-    descripcionCorta: "Gestión financiera para emprendedores",
-  },
-];
 
 export default function CursosPage() {
   return (
@@ -67,7 +29,7 @@ export default function CursosPage() {
 
                 <div className="px-3 pt-6">
                   <Link
-                    href="#"
+                    href={"/cursos/" + items.slug}
                     className="text-2xl font-bold text-black max-w-75% inline-block"
                   >
                     {items.heading}

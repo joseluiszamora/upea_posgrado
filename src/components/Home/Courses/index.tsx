@@ -40,43 +40,6 @@ const Courses = () => {
     ],
   };
 
-  const renderStars = (rating: number, key: number) => {
-    const fullStars = Math.floor(rating);
-    const halfStars = rating % 1 >= 0.5 ? 1 : 0;
-    const emptyStars = 5 - fullStars - halfStars;
-
-    return (
-      <Icon
-        key={key}
-        icon="tabler:star-filled"
-        className="text-yellow-500 text-xl inline-block"
-      />
-      //   <div>
-      //     {Array(fullStars).fill(
-      //       <Icon
-      //         key={key}
-      //         icon="tabler:star-filled"
-      //         className="text-yellow-500 text-xl inline-block"
-      //       />
-      //     )}
-      //     {halfStars > 0 && (
-      //       <Icon
-      //         key={key}
-      //         icon="tabler:star-half-filled"
-      //         className="text-yellow-500 text-xl inline-block"
-      //       />
-      //     )}
-      //     {Array(emptyStars).fill(
-      //       <Icon
-      //         key={key}
-      //         icon="tabler:star-filled"
-      //         className="text-gray-400 text-xl inline-block"
-      //       />
-      //     )}
-      //   </div>
-    );
-  };
-
   return (
     <section id="courses">
       <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
@@ -112,7 +75,7 @@ const Courses = () => {
 
                 <div className="px-3 pt-6">
                   <Link
-                    href="#"
+                    href={"/cursos/" + items.slug}
                     className="text-2xl font-bold text-black max-w-75% inline-block"
                   >
                     {items.heading}
@@ -142,7 +105,7 @@ const Courses = () => {
                         className="text-primary text-xl inline-block me-2"
                       />
                       <h3 className="text-base font-medium text-black opacity-75">
-                        {items.classes} semanas
+                        {items.duration}
                       </h3>
                     </div>
                     <div className="flex gap-4">
@@ -151,7 +114,7 @@ const Courses = () => {
                         className="text-primary text-xl inline-block me-2"
                       /> */}
                       <h3 className="text-base font-medium text-black opacity-75">
-                        Modalidad Virtual
+                        {items.modality}
                       </h3>
                     </div>
                   </div>

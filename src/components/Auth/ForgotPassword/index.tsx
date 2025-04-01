@@ -2,45 +2,63 @@
 import React from "react";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import axios from "axios";
 import Loader from "@/components/Common/Loader";
 import Link from "next/link";
 import Image from "next/image";
+import axios, { AxiosError } from "axios";
+
+interface ResetPasswordResponse {
+  message: string;
+}
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const [loader, setLoader] = useState(false);
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // Validación del email
     if (!email) {
       toast.error("Please enter your email address.");
+      return;
+    }
 
+    // Validación de formato de email (opcional)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error("Please enter a valid email address.");
       return;
     }
 
     setLoader(true);
 
     try {
-      const res = await axios.post("/api/forgot-password/reset", {
-        email: email.toLowerCase(),
-      });
+      const res = await axios.post<ResetPasswordResponse>(
+        "/api/forgot-password/reset",
+        { email: email.toLowerCase() }
+      );
 
-      if (res.status === 404) {
-        toast.error("User not found.");
-        return;
-      }
-
-      if (res.status === 200) {
-        toast.success(res.data);
-        setEmail("");
-      }
-
+      // Manejo de respuestas exitosas
+      toast.success(res.data.message);
       setEmail("");
-      setLoader(false);
-    } catch (error: any) {
-      toast.error(error?.response.data);
+    } catch (error) {
+      // Manejo tipado de errores
+      if (axios.isAxiosError(error)) {
+        const axiosError = error as AxiosError<{ message?: string }>;
+
+        if (axiosError.response) {
+          const errorMessage =
+            axiosError.response.data?.message || "An unexpected error occurred";
+          toast.error(errorMessage);
+        } else {
+          toast.error("Network error - please check your connection");
+        }
+      } else {
+        toast.error("An unknown error occurred");
+        console.error("Unexpected error:", error);
+      }
+    } finally {
       setLoader(false);
     }
   };

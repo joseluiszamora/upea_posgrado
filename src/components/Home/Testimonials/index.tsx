@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Image from "next/image";
-import { Icon } from "@iconify/react/dist/iconify.js";
 import { TestimonialData } from "@/app/api/data";
 
 const Testimonial = () => {
@@ -48,39 +47,6 @@ const Testimonial = () => {
     ],
   };
 
-  const renderStars = (rating: number) => {
-    const fullStars = Math.floor(rating);
-    const halfStars = rating % 1 >= 0.5 ? 1 : 0;
-    const emptyStars = 5 - fullStars - halfStars;
-
-    return (
-      <Icon
-        icon="tabler:star-filled"
-        className="text-yellow-500 text-xl inline-block"
-      />
-      // <>
-      //   {Array(fullStars).fill(
-      //     <Icon
-      //       icon="tabler:star-filled"
-      //       className="text-yellow-500 text-xl inline-block"
-      //     />
-      //   )}
-      //   {halfStars > 0 && (
-      //     <Icon
-      //       icon="tabler:star-half-filled"
-      //       className="text-yellow-500 text-xl inline-block"
-      //     />
-      //   )}
-      //   {Array(emptyStars).fill(
-      //     <Icon
-      //       icon="tabler:star-filled"
-      //       className="text-gray-400 text-xl inline-block"
-      //     />
-      //   )}
-      // </>
-    );
-  };
-
   return (
     <section id="testimonial">
       <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4">
@@ -115,7 +81,7 @@ const Testimonial = () => {
                       {items.profession}
                     </h3>
                   </div>
-                  <div className="flex">{renderStars(items.rating)}</div>
+                  {/* <div className="flex">{renderStars(items.rating)}</div> */}
                 </div>
               </div>
             </div>
