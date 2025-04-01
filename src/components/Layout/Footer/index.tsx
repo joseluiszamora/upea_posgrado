@@ -45,7 +45,7 @@ const footer = () => {
             </ul>
           </div>
           <div className="col-span-2">
-            <h3 className="mb-4 text-2xl font-medium">Other</h3>
+            {/* <h3 className="mb-4 text-2xl font-medium">Other</h3>
             <ul>
               <li className="mb-2 text-black/50 hover:text-primary w-fit">
                 <Link href="#">About Us</Link>
@@ -62,7 +62,7 @@ const footer = () => {
               <li className="mb-2 text-black/50 hover:text-primary w-fit">
                 <Link href="#">Contact</Link>
               </li>
-            </ul>
+            </ul> */}
           </div>
           <div className="col-span-4 md:col-span-4 lg:col-span-4">
             <div className="flex items-center gap-2">
@@ -71,7 +71,8 @@ const footer = () => {
                 className="text-primary text-3xl inline-block me-2"
               />
               <h5 className="text-lg text-black/60">
-                925 Filbert Street Pennsylvania 18072
+                Edificio de Posgrado UPEA Av. Sucre B, a lado del Área
+                Financiera Zona Villa Esperanza-El Alto
               </h5>
             </div>
             <div className="flex gap-2 mt-10">
@@ -86,24 +87,24 @@ const footer = () => {
                 icon="tabler:folder"
                 className="text-primary text-3xl inline-block me-2"
               />
-              <h5 className="text-lg text-black/60">info@gmail.com</h5>
+              <h5 className="text-lg text-black/60">posgrado@upea.bo</h5>
             </div>
           </div>
         </div>
 
         <div className="mt-10 lg:flex items-center justify-between">
           <h4 className="text-black/50 text-sm text-center lg:text-start font-normal">
-            @2025 Agency. All Rights Reserved by{" "}
-            <Link
+            @2025 Posgrado UPEA{" "}
+            {/* <Link
               href="https://getnextjstemplates.com/"
               target="_blank"
               className="hover:text-primary"
             >
               {" "}
               GetNextJsTemplates.com
-            </Link>
+            </Link> */}
           </h4>
-          <div className="flex gap-5 mt-5 lg:mt-0 justify-center lg:justify-start">
+          {/* <div className="flex gap-5 mt-5 lg:mt-0 justify-center lg:justify-start">
             <Link
               href="/"
               target="_blank"
@@ -118,7 +119,7 @@ const footer = () => {
             >
               Terms & conditions
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
