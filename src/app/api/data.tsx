@@ -93,39 +93,75 @@ export const courseData: {
 ];
 
 export const MentorData: {
-  profession: string;
   name: string;
   imgSrc: string;
+  studies: Array<string>;
+  capacities: Array<string>;
 }[] = [
   {
-    profession: "Senior UX Designer",
-    name: "Shoo Thar Mien",
-    imgSrc: "/images/mentor/user3.png",
+    name: "Dra. Laura Méndez Rojas",
+    imgSrc: "/images/mentor/docente6.jpeg",
+    studies: [
+      "PhD en Ingeniería de Sistemas con especialización en IA (Universidad de São Paulo, Brasil).",
+      "Máster en Gestión de la Calidad Total (Universidad Nacional Autónoma de México).",
+    ],
+    capacities: [
+      "Experta en sistemas de calidad ISO 9001 y modelos de mejora continua (Six Sigma),",
+      "Investigadora en machine learning aplicado a procesos industriales.",
+      "Docente con más de 10 años de experiencia en educación superior.",
+    ],
   },
   {
-    profession: "Senior UX Designer",
-    name: "Shoo Thar Mien",
-    imgSrc: "/images/mentor/user2.png",
+    name: " Ing. Carlos Vargas Fernández",
+    imgSrc: "/images/mentor/docente1.jpeg",
+    studies: [
+      "Ingeniería Industrial con posgrado en Inteligencia Artificial (Universidad Mayor de San Andrés, Bolivia).",
+      "Especialización en Control Estadístico de Procesos (Universidad de Buenos Aires).",
+    ],
+    capacities: [
+      "Consultor en implementación de sistemas de gestión de calidad en PYMES.",
+      "Experto en Python y análisis de datos para IA.",
+      "Ha trabajado en proyectos de automatización de procesos con IA en Bolivia.",
+    ],
   },
   {
-    profession: "Senior UX Designer",
-    name: "Shoo Thar Mien",
-    imgSrc: "/images/mentor/user1.png",
+    name: "MSc. Patricia Cruz Alarcón",
+    imgSrc: "/images/mentor/docente5.jpeg",
+    studies: [
+      "Máster en Ciencias de la Computación con enfoque en IA (Universidad Federal de Rio de Janeiro).",
+      "Diplomado en Normas ISO 31000 y gestión de riesgos (Universidad Católica Boliviana).",
+    ],
+    capacities: [
+      "Especialista en algoritmos de deep learning y visión por computadora.",
+      "Auditora líder en sistemas de gestión de calidad (certificada por IRCA).",
+      "Docente universitaria e investigadora en aplicaciones de IA en salud.",
+    ],
   },
   {
-    profession: "Senior UX Designer",
-    name: "Shoo Thar Mien",
-    imgSrc: "/images/mentor/user3.png",
+    name: "Dr. Javier Ríos Mercado",
+    imgSrc: "/images/mentor/docente3.jpeg",
+    studies: [
+      "Doctorado en Ingeniería de Calidad (Universidad Politécnica de Madrid, España).",
+      "Máster en Ciencia de Datos e IA (Universidad de La Plata, Argentina).",
+    ],
+    capacities: [
+      "Experto en modelos predictivos y optimización de procesos con IA.",
+      "Consultor internacional en sistemas de calidad para la industria alimentaria.",
+      "Autor de publicaciones sobre IA aplicada a logística y cadena de suministro.",
+    ],
   },
   {
-    profession: "Senior UX Designer",
-    name: "Shoo Thar Mien",
-    imgSrc: "/images/mentor/user2.png",
-  },
-  {
-    profession: "Senior UX Designer",
-    name: "Shoo Thar Mien",
-    imgSrc: "/images/mentor/user1.png",
+    name: "Ing. Sofía Huanca Quispe",
+    imgSrc: "/images/mentor/docente2.jpeg",
+    studies: [
+      "Ingeniería de Sistemas con especialización en IA (UPEA, Bolivia).",
+      "Máster en Gestión de la Calidad y Productividad (Universidad del Valle, Colombia).",
+    ],
+    capacities: [
+      "Desarrolladora de chatbots y sistemas expertos para empresas bolivianas.",
+      "Certificada en Lean Manufacturing y mejora de procesos.",
+      "Jefa de proyectos de transformación digital en el sector público.",
+    ],
   },
 ];
 

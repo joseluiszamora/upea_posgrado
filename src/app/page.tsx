@@ -11,8 +11,8 @@ export default function Home() {
       <Hero />
       {/* <Companies /> */}
       <Courses />
-      {/* <Mentor />
-      <Testimonial /> */}
+      <Mentor />
+      {/* <Testimonial /> */}
       {/* <Newsletter /> */}
     </main>
   );
